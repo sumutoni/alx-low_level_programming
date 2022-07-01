@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- *main function used to print to standard output using puts() function
+ * main - used to print to standard output using puts() function
+ *
+ * Return: 0 to signify program was successful
  */
 int main(void)
 {
