@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-	char str[120]="and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	char str[120] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
 	fwrite(str, sizeof(str), 1, stderr);
-	return (0);
+	return (1);
 }
