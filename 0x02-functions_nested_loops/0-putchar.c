@@ -12,7 +12,10 @@ int main(void)
 
 	for (i = 0; i <= 8; i++)
 	{
-		_putchar(word[i]);
+		if (word[i] != '\0')
+		{
+			_putchar(word[i]);
+		}
 	}
 	_putchar('\n');
 	return (0);
