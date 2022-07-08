@@ -13,7 +13,7 @@ void times_table(void)
 		for (j = 0; j <= 9; j++)
 		{
 			prod = i * j;
-			if (i != 9 && j != 9)
+			if (j != 9)
 			{
 				if (prod < 10)
 				{
