@@ -2,6 +2,7 @@
 
 /**
  * print_line - print _ n number of times
+ * @n: number of times to print _
  */
 void print_line(int n)
 {
