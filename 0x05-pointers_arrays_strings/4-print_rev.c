@@ -9,12 +9,15 @@
 void print_rev(char *s)
 {
 	int i, j;
-	char str[];
+	char str[strlen(s)];
 
-	for (i = 0, j = strlen(s); i < strlen(s), 
-			j > 0; i++, j--)
+	i = 0;
+	j = strlen(s);
+	while (i < strlen(s) || j > 0)
 	{
 		str[i] = s[j];
+		i++;
+		j--;
 	}
 	puts(str);
 }
