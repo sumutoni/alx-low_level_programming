@@ -16,12 +16,13 @@ void puts2(char *s)
 	{
 		if (i % 2 == 0)
 		{
-			putchar(s[i]);
+			printf("%c", s[i]);
 		}
 		else
 		{
 			continue;
 		}
+		i++;
 	}
 	putchar('\n');
 }
