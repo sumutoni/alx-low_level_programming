@@ -11,13 +11,14 @@ void rev_string(char *s)
 	int len, i, j, mid;
 	char temp;
 
+	temp = ' ';
 	len = strlen(s);
 	i = 1;
 	j = len;
 	mid = len / 2;
 	if (len % 2 == 0)
 	{
-		while (i <= mid && j >= mid + 1)
+		while (i <= mid && j >= (mid + 1))
 		{
 			temp = s[i];
 			s[i] = s[j];
