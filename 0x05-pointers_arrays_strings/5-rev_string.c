@@ -8,16 +8,16 @@
  */
 void rev_string(char *s)
 {
-	int len, i, j;
+	int len, i, j, mid;
 	char temp;
 
 	len = strlen(s);
 	i = 1;
 	j = len;
+	mid = len / 2;
 	if (len % 2 == 0)
 	{
-		while (i <= (len / 2) 
-			&& j >= (len / 2) - 1)
+		while (i <= mid && j >= mid + 1)
 		{
 			temp = s[i];
 			s[i] = s[j];
@@ -28,8 +28,7 @@ void rev_string(char *s)
 	}
 	else
 	{
-		while (i < (len / 2) && 
-			j > (len / 2))
+		while (i < mid && j > mid)
 		{
 			temp = s[i];
 			s[i] = s[j];
@@ -38,4 +37,5 @@ void rev_string(char *s)
 			i++;
 		}
 	}
+
 }
