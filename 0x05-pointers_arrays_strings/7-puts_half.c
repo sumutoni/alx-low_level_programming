@@ -19,4 +19,12 @@ void puts_half(char *str)
 			printf("%c", str[i]);
 		}
 	}
+	else
+	{
+		for (i = mid; i < len; i++)
+		{
+			printf("%c", str[i]);
+		}
+	}
+	printf("\n");
 }
