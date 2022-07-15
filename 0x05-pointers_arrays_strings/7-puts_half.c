@@ -4,7 +4,7 @@
 
 /**
  * puts_half - prints second half of string
- * @s: string
+ * @str: string
  */
 void puts_half(char *str)
 {
@@ -21,7 +21,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		for (i = mid; i < len; i++)
+		for (i = mid + 1; i < len; i++)
 		{
 			printf("%c", str[i]);
 		}
