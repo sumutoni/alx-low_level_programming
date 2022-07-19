@@ -30,13 +30,13 @@ int check_char(char s)
 {
 	if (s == ' ' || s == '.' || s == ',')
 		return (1);
-	if (s == ';' || s == '!' || s == '?')
+	else if (s == ';' || s == '!' || s == '?')
 		return (1);
-	if (s == '"' || s == '{' || s == '}')
+	else if (s == '"' || s == '{' || s == '}')
 		return (1);
-	if (s =='(' || s == ')' || s == '!')
+	else if (s =='(' || s == ')' || s == '!')
 		return (1);
-	if (s == '\t')
+	else if (s == '\t' || s == '\n')
 		return (1);
 	else
 		return (0);
