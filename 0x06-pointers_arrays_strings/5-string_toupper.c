@@ -15,9 +15,9 @@ char *string_toupper(char *s)
 	len = strlen(s);
 	for (i = 0; i < len; i++)
 	{
-		if (isupper(s[i]) == 0)
+		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			toupper(s[i]);
+			s[i] = s[i] - 32;
 		}
 	}
 	return (s);
