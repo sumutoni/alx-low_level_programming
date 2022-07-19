@@ -22,6 +22,10 @@ char *_strchr(char *s, char c)
 			ptr = &s[i];
 			break;
 		}
+		else
+		{
+			ptr = NULL;
+		}
 	}
 	return (ptr);
 }
