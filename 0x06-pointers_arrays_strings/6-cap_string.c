@@ -2,6 +2,8 @@
 #include <ctype.h>
 #include <string.h>
 
+int check_char(char s);
+
 /**
  * cap_string - capitalize every word in a string
  * @s: string
@@ -26,6 +28,12 @@ char *cap_string(char *s)
 		}
 	}
 }
+/**
+ * check_char - checks if a character is a punctuation
+ * @s: character to check
+ *
+ * Return: 1 if true, 0 if false
+ */
 int check_char(char s)
 {
 	if (s == ' ' || s == '.' || s == ',')
