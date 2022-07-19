@@ -9,9 +9,10 @@
  */
 char * leet(char *s)
 {
-	int i;
+	int i, len;
 
-	for (i = 0; i < strlen(s); i++)
+	len = strlen(s)
+	for (i = 0; i < len; i++)
 	{
 		if (s[i] == 'a' || s[i] == 'A')
 		{
