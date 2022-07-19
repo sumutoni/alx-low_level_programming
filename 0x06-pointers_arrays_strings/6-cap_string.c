@@ -37,7 +37,7 @@ int check_char(char s)
 	if (s =='(' || s == ')' || s == '!')
 		return (1);
 	if (s == '\t')
-		return (1)
+		return (1);
 	else
 		return (0);
 }
