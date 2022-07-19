@@ -11,7 +11,7 @@ char * leet(char *s)
 {
 	int i, len;
 
-	len = strlen(s)
+	len = strlen(s);
 	for (i = 0; i < len; i++)
 	{
 		if (s[i] == 'a' || s[i] == 'A')
