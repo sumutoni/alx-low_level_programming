@@ -13,19 +13,30 @@ char *cap_string(char *s)
 	int i;
 
 	i = 0;
-	if (isupper(s[i]) == 0)
+	if (s[i] >= 'a' && s[i] <= 'z')
 	{
-		toupper(s[i]);
+		s[i] = s[i] - 32;
 	}
 	for (i = 0; i < strlen(s); i++)
 	{
-		if ((s[i] == ',' || s[i] == ';' ||
-			s[i] == '.' || s[i] == '!' || s[i] == '?'
-			|| s[i] == '"' || s[i] == '(' || s[i] == ')'
-			|| s[i] == '{' || s[i] == '}') && s[i + 1] != '\0')
+		if (check_char(s[i]) && s[i + 1] != '\0')
 		{
-			toupper(s[i + 1]);
+			s[i + 1] = s[i + 1] - 32;
 		}
 	}
-	return (s);
+}
+int check_char(char s)
+{
+	if (s == ' ' || s == '.' || s == ',')
+		return (1);
+	if (s == ';' || s == '!' || s == '?')
+		return (1);
+	if (s == '"' || s == '{' || s == '}')
+		return (1);
+	if (s =='(' || s == ')' || s == '!')
+		return (1);
+	if (s == '\t')
+		return (1)
+	else
+		return (0);
 }
