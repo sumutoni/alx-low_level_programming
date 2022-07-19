@@ -10,14 +10,15 @@
  */
 char *cap_string(char *s)
 {
-	int i;
+	int i, len;
 
 	i = 0;
+	len = strlen(s);
 	if (s[i] >= 'a' && s[i] <= 'z')
 	{
 		s[i] = s[i] - 32;
 	}
-	for (i = 0; i < strlen(s); i++)
+	for (i = 0; i < len; i++)
 	{
 		if (check_char(s[i]) && s[i + 1] != '\0')
 		{
