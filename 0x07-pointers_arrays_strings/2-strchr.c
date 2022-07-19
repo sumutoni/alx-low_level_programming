@@ -10,8 +10,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i, len;
-	char *ptr;
+	char static *ptr;
 
 	ptr = strchr(s, c);
 	return (ptr);
