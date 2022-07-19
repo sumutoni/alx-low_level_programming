@@ -14,7 +14,6 @@ char *cap_string(char *s)
 {
 	int i, len;
 
-	i = 0;
 	len = strlen(s);
 	if (s[i] >= 'a' && s[i] <= 'z')
 	{
