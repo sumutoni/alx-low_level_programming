@@ -39,7 +39,7 @@ int _atoi(char *s)
 	int i, sign, num, num2;
 
 	num = 0;
-	num2 = check_int(char *s);
+	num2 = check_int(s);
 	sign = check_sign(s);
 	if (num2)
 	{
