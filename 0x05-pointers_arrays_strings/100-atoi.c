@@ -53,7 +53,7 @@ int _atoi(char *s)
 	num = 0;
 	num2 = check_int(s);
 	sign = check_sign(s);
-	if (num2)
+	if (num2 > 0)
 	{
 		for (i = 0; i != '\0'; i++)
 		{
