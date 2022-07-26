@@ -1,11 +1,17 @@
 #include "main.h"
 
+/**
+ * check_sign - check how many - signs are there
+ * @s: string to check in
+ *
+ * Return: -1 if number is odd and +1 if even
+ */
 int check_sign(char *s)
 {
 	int i, total;
 
 	total = 0;
-	for (i = 0; i !='\0'; i++)
+	for (i = 0; i != '\0'; i++)
 	{
 		if (s[i] == '-')
 		{
@@ -16,6 +22,12 @@ int check_sign(char *s)
 		return (1);
 	return (-1);
 }
+/**
+ * check_int - check if there are integers in string
+ * @s: string to check in
+ *
+ * Return: 0 if none and a + int if there are
+ */
 int check_int(char *s)
 {
 	int i, num;
