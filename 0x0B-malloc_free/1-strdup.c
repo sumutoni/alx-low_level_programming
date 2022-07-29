@@ -18,7 +18,7 @@ char *_strdup(char *str)
 		return (NULL);
 	/*This is to avoid writing malloc(sizeof(str)); causes error*/
 	len = strlen(str);
-	stcpy = malloc(len + 5);
+	stcpy = malloc(len);
 	if (stcpy == NULL)
 		return (NULL);
 	strcpy(stcpy, str);
