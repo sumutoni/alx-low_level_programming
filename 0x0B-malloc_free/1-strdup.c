@@ -12,10 +12,13 @@
 char *_strdup(char *str)
 {
 	char *stcpy;
+	int len;
 
+	/*This is to avoid writing malloc(sizeof(str)); causes error*/
+	len = strlen(str);
 	if (str == NULL)
 		return (NULL);
-	stcpy = malloc(sizeof(*str));
+	stcpy = malloc(len);
 	if (stcpy == NULL)
 		return (NULL);
 	strcpy(stcpy, str);
