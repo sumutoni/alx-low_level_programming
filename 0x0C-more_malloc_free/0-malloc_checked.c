@@ -12,7 +12,10 @@ void *malloc_checked(unsigned int b)
 
 	i = malloc(b);
 	if (i == NULL)
-		printf("98");
+	{
+		_putchar('9');
+		_putchar('8');
+	}
 	else
 		return i;
 }
