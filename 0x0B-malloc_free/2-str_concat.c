@@ -11,7 +11,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char **cpy;
+	char *cpy;
 	int len1, len2, total_len;
 
 	if (s1 == NULL || s2 == NULL)
@@ -24,10 +24,17 @@ char *str_concat(char *s1, char *s2)
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 	total_len = len1 + len2;
-	*cpy = (char *)malloc((total_len + 1) * sizeof(char));
+	*cpy = malloc((total_len + 1) * sizeof(char));
 	if (cpy == NULL)
 		return (NULL);
-	strcat(s1, s2);
-	strcpy(*cpy, s1);
-	return (*cpy);
+	while (*s1 != '\0')
+		s1++;
+	while (*s2 != '\0')
+	{
+		*s1 = *s2;
+		s2++;
+		s1++;
+	}
+	strcpy(cpy, s1);
+	return (cpy);
 }
