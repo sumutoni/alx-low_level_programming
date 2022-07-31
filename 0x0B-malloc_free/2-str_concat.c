@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	while (*s1 != '\0')
 	{
 		*cpy = *s1;
-		cpy++
+		cpy++;
 		s1++;
 	}
 	while (*s2 != '\0')
