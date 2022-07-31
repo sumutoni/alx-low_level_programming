@@ -18,4 +18,5 @@ void free_grid(int **grid, int height)
 		else
 			break;
 	}
+	free(grid);
 }
