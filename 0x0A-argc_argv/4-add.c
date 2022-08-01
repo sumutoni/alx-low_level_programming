@@ -8,7 +8,7 @@
  * check_symbol - checks if there is a non digit symbol in string
  * @s: string
  *
- * Return: 1 if there is 0 if not
+ * Return: 1 if there is, 0 if not
  */
 int check_symbol(char *s)
 {
@@ -17,7 +17,10 @@ int check_symbol(char *s)
 	for (i = 0; i < (int)strlen(s); i++)
 	{
 		if (s[i] < '0' || s[i] > '9')
+		{
 			res = 0;
+			break;
+		}	
 		else
 			res = 1;
 	}
