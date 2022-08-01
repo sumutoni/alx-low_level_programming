@@ -31,7 +31,8 @@ int test_int(char *value)
  */
 int main(int argc, char *argv[])
 {
-	int i, res, product;
+	long i, product;
+	int res;
 
 	product = 1;
 	if (argc < 3)
