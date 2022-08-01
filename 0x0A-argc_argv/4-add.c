@@ -16,7 +16,7 @@ int check_symbol(char *s)
 
 	for (i = 0; i < (int)strlen(s); i++)
 	{
-		if (!(isdigit(s[i])))
+		if (s[i] < '0' || s[i] > '9')
 			res = 0;
 		else
 			res = 1;
@@ -32,7 +32,7 @@ int check_symbol(char *s)
 int to_int(char *s)
 {
 	int i, num;
-	
+
 	num = 0;
 	i = 0;
 	while (s[i] >= '0' && s[i] <= '9')
@@ -40,7 +40,7 @@ int to_int(char *s)
 		num = num * 10 + s[i] - '0';
 		i++;
 	}
-	return num;
+	return (num);
 }
 /**
  * main - adds 2 numbers
