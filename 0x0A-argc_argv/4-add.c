@@ -24,7 +24,7 @@ int check_symbol(char *s)
 	return (res);
 }
 /**
- * _atoi - function to convert string to integer
+ * to_int - function to convert string to integer
  * @s: string to convert
  *
  * Return: converted integer
