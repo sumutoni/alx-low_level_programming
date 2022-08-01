@@ -44,7 +44,7 @@ char *concat(char *s1, char *s2, char *cpy, unsigned int n, int len1, int len2)
 	return (cpy);
 }
 /**
- * str_nconcat - concatenates n bytes of second string to first string
+ * string_nconcat - concatenates n bytes of second string to first string
  * @s1: first string
  * @s2: second string
  * @n: bytes to concatenate
