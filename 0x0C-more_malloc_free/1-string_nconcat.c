@@ -10,7 +10,7 @@
  *
  * Return: pointer to new memory containing concatenation
  */
-char *str_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *cpy;
 	int len1, len2, total_len, i, j;
