@@ -11,14 +11,16 @@
  */
 int test_int(char *value)
 {
-	int res;
+	int i;
 
-	res = atoi(value);
-
-	if (res == 0 && value != "0")
-		return 0;
-	else
-		return 1;
+	for (i = 0; i < (int)strlen(value); i++)
+	{
+		if (value[i] >= 48 || value[i] <= 57)
+			continue;
+		else
+			return (0);
+	}
+	return 1;
 }
 /**
  * main - receives 2 integers and multiply them
