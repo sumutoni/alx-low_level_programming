@@ -34,10 +34,11 @@ int to_int(char *s)
 	int i, num;
 	
 	num = 0;
-	while (*s >= '0' && *s <= '9')
+	i = 0;
+	while (s[i] >= '0' && s[i] <= '9')
 	{
-		num = num * 10 + *s - '0';
-		s++;
+		num = num * 10 + s[i] - '0';
+		i++;
 	}
 	return num;
 }
