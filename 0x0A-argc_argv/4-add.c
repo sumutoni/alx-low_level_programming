@@ -11,10 +11,16 @@
  */
 int check_symbol(char *s)
 {
-	if (atoi(s) == 0 && s != "0")
-		return (0);
-	else
-		return (1);
+	int res, i;
+
+	for (i = 0; i < (int)strlen(s); i++)
+	{
+		if (!(isdigit(s[i])))
+			res = 0;
+		else
+			res = 1;
+	}
+	return (res);
 }
 /**
  * main - adds 2 numbers
