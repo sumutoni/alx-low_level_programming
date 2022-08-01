@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - dynamically allocates memory 
+ * malloc_checked - dynamically allocates memory
  * @b: memory bytes
  */
 void *malloc_checked(unsigned int b)
@@ -14,7 +14,7 @@ void *malloc_checked(unsigned int b)
 	if (i == NULL)
 	{
 		free(i);
-		exit (98);
+		exit(98);
 	}
 	return (i);
 }
