@@ -8,19 +8,13 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *i;
-	void *status;
-	int val;
+	int *i
 
 	i = malloc(b);
-	val = 98;
-	*status =(void *)&val;
 	if (i == NULL)
 	{
-		_putchar('9');
-		_putchar('8');
-		return status;
+		free(i);
+		exit (98);
 	}
-	else
-		return i;
+	return i;
 }
