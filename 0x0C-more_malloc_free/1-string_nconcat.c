@@ -15,7 +15,7 @@
  */
 char *concat(char *s1, char *s2, char *cpy, unsigned int n, unsigned int len1)
 {
-	int i, j;
+	unsigned int i, j;
 
 	j = 0;
 	for (i = 0; i < len1; i++)
