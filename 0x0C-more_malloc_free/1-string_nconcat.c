@@ -10,11 +10,10 @@
  * @n: bytes
  * @cpy: pointer to concatenated string
  * @len1: length of s1
- * @len2: length of s2
  *
  * Return: pointer to concatenated string
  */
-char *concat(char *s1, char *s2, char *cpy, unsigned int n, int len1, int len2)
+char *concat(char *s1, char *s2, char *cpy, unsigned int n, unsigned int len1)
 {
 	int i, j;
 
@@ -24,21 +23,10 @@ char *concat(char *s1, char *s2, char *cpy, unsigned int n, int len1, int len2)
 		cpy[i] = s1[i];
 		j++;
 	}
-	if ((int)n > len2)
+      	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < len2; i++)
-		{
-			cpy[j] = s2[i];
-			j++;
-		}
-	}
-	else
-	{
-		for (i = 0; i < (int)n; i++)
-		{
-			cpy[j] = s2[i];
-			j++;
-		}
+		cpy[j] = s2[i];
+		j++;
 	}
 	cpy[++j] = '\0';
 	return (cpy);
@@ -54,31 +42,24 @@ char *concat(char *s1, char *s2, char *cpy, unsigned int n, int len1, int len2)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *cpy;
-	int len1, len2, total_len;
-
-	if (s1 == NULL || s2 == NULL)
-	{
-		if (s1 == NULL)
-			s1 = "";
-		if (s2 == NULL)
-			s2 = "";
-	}
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-	if ((int)n > len2)
-	{
-		total_len = len1 + len2;
-		cpy = (char *)malloc((total_len + 1) * sizeof(char));
-		if (cpy == NULL)
-			return (NULL);
-	}
-	else
-	{
-		total_len = len1 + (int)n;
-		cpy = (char *)malloc((total_len + 1) * sizeof(char));
-		if (cpy == NULL)
-			return (NULL);
-	}
-	cpy = concat(s1, s2, cpy, n, len1, len2);
+	unsigned int len1, len2, total_len;
+	
+	len1 = 0;
+	len2 = 0;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	while (s1[len1] != '\0')
+		len1++;
+	while(s2[len2] != '\0')
+		len2++;
+	if (n > len2)
+		n = len2;
+	total_len = len1 + n;
+	cpy = (char *)malloc((total_len + 1) * sizeof(char));
+	if (cpy == NULL)
+		return (NULL);	
+	cpy = concat(s1, s2, cpy, n, len1);
 	return (cpy);
 }
