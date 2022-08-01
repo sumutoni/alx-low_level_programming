@@ -20,7 +20,7 @@ int check_symbol(char *s)
 		{
 			res = 0;
 			break;
-		}	
+		}
 		else
 			res = 1;
 	}
