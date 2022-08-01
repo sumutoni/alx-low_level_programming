@@ -24,6 +24,24 @@ int check_symbol(char *s)
 	return (res);
 }
 /**
+ * _atoi - function to convert string to integer
+ * @s: string to convert
+ *
+ * Return: converted integer
+ */
+int to_int(char *s)
+{
+	int i, num;
+	
+	num = 0;
+	while (*s >= '0' && *s <= '9')
+	{
+		num = num * 10 + *s - '0';
+		s++;
+	}
+	return num;
+}
+/**
  * main - adds 2 numbers
  * @argc: number of arguments
  * @argv: string array of arguments
@@ -47,7 +65,7 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				num += atoi(argv[i]);
+				num += to_int(argv[i]);
 			}
 		}
 		printf("%d\n", num);
