@@ -15,6 +15,7 @@ void *malloc_checked(unsigned int b)
 	{
 		_putchar('9');
 		_putchar('8');
+		return;
 	}
 	else
 		return i;
