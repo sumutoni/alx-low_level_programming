@@ -3,7 +3,8 @@
 #include<stdlib.h>
 
 /**
- * _calloc - allocates memory for an array of ints of nmemb elements each with size bytes
+ * _calloc - allocates memory for an array of
+ * ints of nmemb elements each with size bytes
  * @nmemb: number of elements of array
  * @size: bytes to allocate to each element
  *
