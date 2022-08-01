@@ -20,7 +20,7 @@ int test_int(char *value)
 		else
 			return (0);
 	}
-	return 1;
+	return (1);
 }
 /**
  * main - receives 2 integers and multiply them
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	if (argc < 3)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 	for (i = 0; i < argc; i++)
 	{
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		else
 		{
 			printf("Error\n");
-			exit (98);
+			exit(98);
 		}
 	}
 	printf("%d\n", product);
