@@ -9,13 +9,17 @@
 void *malloc_checked(unsigned int b)
 {
 	void *i;
+	void *status;
+	int val;
 
 	i = malloc(b);
+	val = 98;
+	*status =(void *)&val;
 	if (i == NULL)
 	{
 		_putchar('9');
 		_putchar('8');
-		return;
+		return status;
 	}
 	else
 		return i;
