@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
+#include <ctype.h>
 
 /**
  * check_symbol - checks if there is a non digit symbol in string
