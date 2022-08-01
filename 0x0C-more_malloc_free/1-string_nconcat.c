@@ -28,7 +28,7 @@ char *concat(char *s1, char *s2, char *cpy, unsigned int n, unsigned int len1)
 		cpy[j] = s2[i];
 		j++;
 	}
-	cpy[++j] = '\0';
+	cpy[j] = '\0';
 	return (cpy);
 }
 /**
@@ -46,6 +46,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	len1 = 0;
 	len2 = 0;
+	total_len = 0;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
