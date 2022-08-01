@@ -53,6 +53,6 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 	}
-	printf("%d\n", product);
+	printf("%ld\n", product);
 	return (0);
 }
