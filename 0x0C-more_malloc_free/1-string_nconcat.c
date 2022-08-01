@@ -28,7 +28,7 @@ char *concat(char *s1, char *s2, char *cpy, unsigned int n, int len1, int len2)
 	{
 		for (i = 0; i < len2; i++)
 		{
-			cpy[i] = s2[i];
+			cpy[j] = s2[i];
 			j++;
 		}
 	}
@@ -36,7 +36,7 @@ char *concat(char *s1, char *s2, char *cpy, unsigned int n, int len1, int len2)
 	{
 		for (i = 0; i < (int)n; i++)
 		{
-			cpy[i] = s2[i];
+			cpy[j] = s2[i];
 			j++;
 		}
 	}
