@@ -40,12 +40,14 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			check = check_symbol(argv[i]);
-			if (check == 1)
-				num += atoi(argv[i]);
-			else
+			if (check == 0)
 			{
 				printf("Error\n");
 				return (1);
+			}	
+			else
+			{
+				num +=atoi(argv[i]);
 			}
 		}
 		printf("%d\n", num);
