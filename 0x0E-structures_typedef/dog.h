@@ -6,7 +6,7 @@
  */
 typedef struct dog dog;
 /**
- * dog - structure to hold dog information
+ * struct dog - structure to hold dog information
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
