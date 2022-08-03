@@ -7,8 +7,11 @@
  */
 void print_dog(struct dog *d)
 {
+	char *s;
+
+	s = "";
 	if (d == NULL)
-		printf(" ");
+		printf("%s", s);
 	if (d->name == NULL)
 		printf("Name: (nil)\n");
 	if (d->age == 0)
