@@ -27,7 +27,7 @@ dog_t *copy(dog_t *d, char *name, float age, char *owner)
 	d->name[i] = '\0';
 	while (owner[j] != '\0')
 	{
-		d->owner[j] = owner [j];
+		d->owner[j] = owner[j];
 		j++;
 	}
 	d->owner[j] = '\0';
@@ -38,6 +38,8 @@ dog_t *copy(dog_t *d, char *name, float age, char *owner)
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
+ *
+ * Return: pointer to dog variable
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
