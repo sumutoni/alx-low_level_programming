@@ -3,7 +3,7 @@
 
 /**
  * print_dog - print information of a dog
- * @d: dog variable
+ * @d: struct dog
  */
 void print_dog(struct dog *d)
 {
