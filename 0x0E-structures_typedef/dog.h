@@ -4,7 +4,7 @@
 /**
  * dog - typedef of dog structure
  */
-typedef struct dog dog;
+typedef struct dog dog_t;
 /**
  * struct dog - structure to hold dog information
  * @name: name of dog
