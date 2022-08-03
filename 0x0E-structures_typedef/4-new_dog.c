@@ -49,8 +49,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	len_n = strlen(name);
 	len_o = strlen(owner);
 	dg = malloc(sizeof(struct dog));
-	if (dg == NULL || name == NULL || owner == NULL)
+	if (dg == NULL)
+	{
+		free(dg);
 		return (NULL);
+	}
 	dg->name = malloc(len_n + 1);
 	if (dg->name == NULL)
 		return (NULL);
