@@ -25,7 +25,7 @@ dog_t *copy(dog_t *d, char *name, float age, char *owner)
 		i++;
 	}
 	d->name[i] = '\0';
-	while (owner[j] = '\0')
+	while (owner[j] != '\0')
 	{
 		d->owner[j] = owner [j];
 		j++;
