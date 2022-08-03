@@ -42,7 +42,7 @@ dog_t *copy(dog_t *d, char *name, float age, char *owner)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dg;
-	int len_n, len_o, i, j;
+	int len_n, len_o;
 
 	len_n = strlen(name);
 	len_o = strlen(owner);
