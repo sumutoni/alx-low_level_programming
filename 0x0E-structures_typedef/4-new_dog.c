@@ -14,25 +14,24 @@
  */
 dog_t *copy(dog_t *d, char *name, float age, char *owner)
 {
-	dog_t *dg;
 	int i, j;
 
 	i = 0;
 	j = 0;
-	dg->age = age;
+	d->age = age;
 	while (name[i] != '\0')
 	{
-		dg->name[i] = name[i];
+		d->name[i] = name[i];
 		i++;
 	}
-	dg->name[i] = '\0';
+	d->name[i] = '\0';
 	while (owner[j] = '\0')
 	{
-		dg->owner[j] = owner [j];
+		d->owner[j] = owner [j];
 		j++;
 	}
-	dg->owner[j] = '\0';
-	return (dg);
+	d->owner[j] = '\0';
+	return (d);
 }
 /**
  * new_dog - creates a new variable of type dog
