@@ -20,7 +20,7 @@ int _sqrt(int n, int i)
 }
 /**
  * _sqrt_recursion - gets the square root of a number
- * @n: number 
+ * @n: number
  *
  * Return: square root
  */
