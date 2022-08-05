@@ -2,15 +2,19 @@
 #define CALC_H
 
 /**
+ * op_t - typedef of op structure
+ */
+typedef struct op op_t;
+/**
  * struct op - struct op
  * @op: operator
  * @f: associated function
  */
-typedef struct op
+struct op
 {
 	char *op;
 	int (*f)(int a, int b);
-} op_t;
+};
 int op_add(int a, int b);
 int op_sub(int a, int b);
 int op_mul(int a, int b);
