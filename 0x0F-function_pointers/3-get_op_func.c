@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- * get_op_func - selects the correct function to perform the operation 
+ * get_op_func - selects the correct function to perform the operation
  * asked by the user
  * @s: operation to perform
  * @a: integer
@@ -10,7 +10,7 @@
  *
  * Return: result of operation
  */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
