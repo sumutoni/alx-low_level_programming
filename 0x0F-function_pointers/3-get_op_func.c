@@ -5,8 +5,6 @@
  * get_op_func - selects the correct function to perform the operation
  * asked by the user
  * @s: operation to perform
- * @a: integer
- * @b: integer
  *
  * Return: result of operation
  */
