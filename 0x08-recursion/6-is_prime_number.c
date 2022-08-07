@@ -16,7 +16,6 @@ int prime(int n, int i)
 	{
 		if ((n % i == 0) && (i != n))
 		{
-			temp++;
 			return (0);
 		}
 		else
