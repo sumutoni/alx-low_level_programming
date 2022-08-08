@@ -6,7 +6,7 @@
  * check_null - check if string is null
  * @s: string
  */
-void check_null (char *s)
+void check_null(char *s)
 {
 	if (s == NULL)
 		printf("(nil)");
