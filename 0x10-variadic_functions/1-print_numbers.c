@@ -7,19 +7,22 @@
  * @separator: string to be printed between numbers
  * @n: number of integers passed to the function
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_integers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list list;
 
-	if (separator == NULL)
-		exit(0);
 	va_start(list, n);
 	for (i = 0; i < n; i++)
 	{
 		if (i != (n - 1))
 		{
-			printf("%d%s", va_arg(list, int), separator);
+			if (separator)
+			{
+				printf("%d%s", va_arg(list, int), separator);
+			}
+			else
+				printf("%d", va_arg(list, int));
 		}
 		else
 			printf("%d", va_arg(list, int));
