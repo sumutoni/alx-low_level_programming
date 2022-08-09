@@ -54,7 +54,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (s != NULL && *s != '\0')
 	{
-		while(*s != typ[i].sym && i < (int)strlen(s))
+		while (*s != typ[i].sym && i < (int)strlen(s))
 			i++;
 		if (*s == typ[i].sym && *(s + 1) != '\0')
 		{
