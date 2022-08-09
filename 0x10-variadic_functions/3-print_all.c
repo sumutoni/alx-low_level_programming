@@ -5,16 +5,17 @@
 /**
  * print_separator - prints separator
  * @c: character to print separator after
+ * @d: next character
  *
  * Return: 1 for separator, 0 otherwise
  */
-void print_separator(char c)
+void print_separator(char c, char d)
 {
 	int j;
 	char str[] = {'c', 'i', 'f', 's'};
 
 	j = 0;
-	while (j < 4)
+	while (j < 4 && d != '\0')
 	{
 		if (c == str[j])
 		{
@@ -79,22 +80,22 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				typ[0].pr("%c", list);
-				print_separator('c');
+				print_separator('c', format[i + 1]);
 				break;
 			case 'i':
 				typ[1].pr("%d", list);
-				print_separator('i');
+				print_separator('i', format[i + 1]);
 				break;
 			case 'f':
 				typ[2].pr("%f", list);
-				print_separator('f');
+				print_separator('f', format[i + 1]);
 				break;
 			case 's':
 				typ[3].pr("%s", list);
-				print_separator('s');
+				print_separator('s', format[i + 1]);
 				break;
 			default:
-				print_separator(format[i]);
+				print_separator(format[i], format[i + 1]);
 				break;
 		}
 		i++;
