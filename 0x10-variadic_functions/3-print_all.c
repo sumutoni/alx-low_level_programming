@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -42,7 +43,8 @@ void print_all(const char * const format, ...)
 	int i;
 	va_list list;
 	char *s;
-
+	
+	*s = " ";
 	*s = *format;
 	va_start(list, format);
 	i = 0;
@@ -52,7 +54,7 @@ void print_all(const char * const format, ...)
 		      {print_string, "%s", 's'}};
 	while (s != NULL && *s != '\0')
 	{
-		while(*s != typ[i].sym)
+		while(*s != typ[i].sym && i < (int)strlen(s))
 			i++;
 		if (*s == typ[i].sym && *(s + 1) != '\0')
 		{
