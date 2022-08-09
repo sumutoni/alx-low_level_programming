@@ -64,7 +64,7 @@ void print_string(char *s, va_list list)
  */
 void print_all(const char * const format, ...)
 {
-	int i, status;
+	int i;
 	va_list list;
 	type typ[] = {{print_int_char},
 		      {print_int_char},
