@@ -43,15 +43,15 @@ void print_all(const char * const format, ...)
 	int i;
 	va_list list;
 	char *s;
-	
-	*s = " ";
-	*s = *format;
-	va_start(list, format);
-	i = 0;
 	type typ[] = {{print_int_char, "%d", 'i'},
 		      {print_int_char, "%c", 'c'},
 		      {print_float, "%f", 'f'},
 		      {print_string, "%s", 's'}};
+
+	s = NULL;
+	*s = *format;
+	va_start(list, format);
+	i = 0;
 	while (s != NULL && *s != '\0')
 	{
 		while(*s != typ[i].sym && i < (int)strlen(s))
