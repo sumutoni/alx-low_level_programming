@@ -28,10 +28,13 @@ void print_float(char *s, va_list list)
  */
 void print_string(char *s, va_list list)
 {
-	if (va_arg(list, char *) == NULL)
+	char *str;
+
+	str = va_arg(list, char *);
+	if (!str)
 		printf("(nil)");
 	else
-		printf(s, va_arg(list, char *));
+		printf(s, str);
 }
 /**
  * print_all - prints anything passed to it
