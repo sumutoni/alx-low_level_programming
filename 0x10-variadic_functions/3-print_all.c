@@ -2,7 +2,28 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * print_separator - prints separator
+ * @c: character to print separator after
+ *
+ * Return: 1 for separator, 0 otherwise
+ */
+void print_separator(char c)
+{
+	int j;
+	char str[] = {'c', 'i', 'f', 's'};
 
+	j = 0;
+	while (j < 4)
+	{
+		if (c == str[j])
+		{
+			printf(", ");
+			break;
+		}
+		j++;
+	}
+}
 /**
  * print_int_char - print int or char argument
  * @list: va_list
@@ -43,7 +64,7 @@ void print_string(char *s, va_list list)
  */
 void print_all(const char * const format, ...)
 {
-	int i;
+	int i, status;
 	va_list list;
 	type typ[] = {{print_int_char},
 		      {print_int_char},
@@ -58,17 +79,22 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				typ[0].pr("%c", list);
+				print_separator('c');
 				break;
 			case 'i':
 				typ[1].pr("%d", list);
+				print_separator('i');
 				break;
 			case 'f':
 				typ[2].pr("%f", list);
+				print_separator('f');
 				break;
 			case 's':
 				typ[3].pr("%s", list);
+				print_separator('s');
 				break;
 			default:
+				print_separator(format[i]);
 				break;
 		}
 		i++;
