@@ -40,30 +40,28 @@ void print_string(char *s, va_list list)
  */
 void print_all(const char * const format, ...)
 {
-	int i;
+	int i, j;
 	va_list list;
-	char *s;
 	type typ[] = {{print_int_char, "%d", 'i'},
 		      {print_int_char, "%c", 'c'},
 		      {print_float, "%f", 'f'},
 		      {print_string, "%s", 's'}};
 
-	s = NULL;
-	*s = *format;
 	va_start(list, format);
 	i = 0;
-	while (s != NULL && *s != '\0')
+	j = 0;
+	while (format && format[i])
 	{
-		while (*s != typ[i].sym && i < (int)strlen(s))
-			i++;
-		if (*s == typ[i].sym && *(s + 1) != '\0')
+		while (format[i] != typ[j].sym)
+			j++;
+		if (format[i] == typ[j].sym)
 		{
-			typ[i].pr(typ[i].str, list);
+			typ[j].pr(typ[j].str, list);
 			printf(", ");
 		}
 		else
-			typ[i].pr(typ[i].str, list);
-		s++;
+			typ[j].pr(typ[j].str, list);
+		j++;
 	}
 	va_end(list);
 	printf("\n");
