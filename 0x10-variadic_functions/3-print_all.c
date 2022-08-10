@@ -54,9 +54,8 @@ void print_string(char *s, va_list list)
 
 	str = va_arg(list, char *);
 	if (!str)
-		printf("(nil)");
-	else
-		printf(s, str);
+		str = "(nil)";
+	printf(s, str);
 }
 /**
  * print_all - prints anything passed to it
