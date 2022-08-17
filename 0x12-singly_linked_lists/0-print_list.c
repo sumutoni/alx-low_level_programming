@@ -3,6 +3,28 @@
 #include <stdlib.h>
 
 /**
+ * check_null -  checks if string is null
+ * @st: string to check
+ */
+void check_null(char *str)
+{
+	char *nil;
+	
+	nil = "(nil)";
+	if (str == NULL)
+	{
+		_putchar('[');
+		print(0);
+		_putchar(']');
+		_putchar(' ');
+		while (*nil != '\0')
+		{
+			_putchar(*nil);
+			nil++;
+		}
+	}
+}
+/**
  * print - print a number
  * @i: number to print
  */
