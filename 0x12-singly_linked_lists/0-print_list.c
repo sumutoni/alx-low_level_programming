@@ -3,25 +3,21 @@
 #include <stdlib.h>
 
 /**
- * check_null -  checks if string is null
- * @st: string to check
+ * print_null -  print null string
  */
-void check_null(char *str)
+void print_null(void)
 {
 	char *nil;
-	
+
 	nil = "(nil)";
-	if (str == NULL)
+	_putchar('[');
+	_putchar('0');
+	_putchar(']');
+	_putchar(' ');
+	while (*nil != '\0')
 	{
-		_putchar('[');
-		print(0);
-		_putchar(']');
-		_putchar(' ');
-		while (*nil != '\0')
-		{
-			_putchar(*nil);
-			nil++;
-		}
+		_putchar(*nil);
+		nil++;
 	}
 }
 /**
@@ -50,21 +46,26 @@ size_t print_list(const list_t *h)
 	nodes = 0;
 	while (next != NULL)
 	{
-		_putchar('[');
-		print(next->len);
-		_putchar(']');
-		_putchar(' ');
-		s = malloc(sizeof(char) * strlen(next->str));
-		if (!s)
+		if (next->str == NULL)
+			print_null();
+		else
 		{
-			free(s);
-			break;
-		}
-		s = next->str;
-		while (*s != '\0')
-		{
-			_putchar(*s);
-			s++;
+			_putchar('[');
+			print(next->len);
+			_putchar(']');
+			_putchar(' ');
+			s = malloc(sizeof(char) * strlen(next->str));
+			if (!s)
+			{
+				free(s);
+				break;
+			}
+			s = next->str;
+			while (*s != '\0')
+			{
+				_putchar(*s);
+				s++;
+			}
 		}
 		_putchar('\n');
 		nodes++;
