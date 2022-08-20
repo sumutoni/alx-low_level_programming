@@ -21,5 +21,6 @@ int _putchar(char c);
 size_t print_listint(const listint_t *h);
 void print_num(int i);
 void print_zero(void);
+size_t listint_len(const listint_t *h);
 
 #endif
