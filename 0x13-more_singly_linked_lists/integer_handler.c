@@ -1,5 +1,7 @@
 #include "lists.h"
-
+#include <stdio.h>
+#include <stddef.h>
+#include <stdlib.h>
 /**
  * check_negative - checks if num is negative
  * @i: integer
