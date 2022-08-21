@@ -35,7 +35,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *prev;
 	listint_t *new;
 
-	if (!head || *head == NULL)
+	if (!head)
 		return (NULL);
 	size = counte(*head);
 	if (size <= idx)
@@ -46,6 +46,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (!new)
 		return (NULL);
 	new->n = n;
+	if (idx == 0)
+	{
+		new->next = node;
+		*head = new;
+		return (new);
+	}
 	while (node && index < idx)
 	{
 		prev = node;
