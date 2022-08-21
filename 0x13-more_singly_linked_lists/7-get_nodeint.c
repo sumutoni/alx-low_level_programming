@@ -6,9 +6,9 @@
  *
  * Return: number of nodes
  */
-int counter (listint_t *h)
+unsigned int counter (listint_t *h)
 {
-	int count;
+	unsigned int count;
 	listint_t *node;
 
 	node = h;
@@ -30,7 +30,7 @@ int counter (listint_t *h)
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *node;
-	int ind, size;
+	unsigned int ind, size;
 
 	ind = 0;
 	node = head;
