@@ -19,7 +19,7 @@ listint_t *reverse(listint_t *h)
 	if (h->next == NULL)
 	{
 		newHead = h;
-		return(newHead);
+		return (newHead);
 	}
 	node->next = prev;
 	prev->next = NULL;
@@ -27,7 +27,7 @@ listint_t *reverse(listint_t *h)
 }
 /**
  * reverse_listint - reverses a list
- * @head - pointer to pointer of head of list
+ * @head: pointer to pointer of head of list
  *
  * Return: address to head of reversed list
  */
