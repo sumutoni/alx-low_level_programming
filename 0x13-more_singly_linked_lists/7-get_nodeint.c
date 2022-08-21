@@ -32,14 +32,14 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	listint_t *node;
 	int ind, size;
 
-	index = 0;
+	ind = 0;
 	node = head;
 	size = counter(head);
 	if (head == NULL)
 		return (NULL);
-	if (size < index)
+	if (size <= index)
 		return (NULL);
-	while (node)
+	while (node && ind < size)
 	{
 		if (index == ind)
 			break;
