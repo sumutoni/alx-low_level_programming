@@ -58,6 +58,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		node = node->next;
 		index++;
 	}
+	if (idx == (size - 1))
+	{
+		node->next = new;
+		new->next = NULL;
+		return (new);
+	}
 	prev->next = new;
 	new->next = node;
 	return (new);
