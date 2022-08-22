@@ -44,6 +44,7 @@ int pop_listint(listint_t **head)
 	}
 	node = (*head)->next;
 	value = (*head)->n;
+	free(*head);
 	*head = node;
 	return (value);
 }
