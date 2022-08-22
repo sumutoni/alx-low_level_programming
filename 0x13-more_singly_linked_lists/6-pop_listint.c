@@ -37,9 +37,7 @@ int pop_listint(listint_t **head)
 	if (size == 1)
 	{
 		value = (*head)->n;
-		*head = NULL;
 		free(*head);
-		free(head);
 		return (value);
 	}
 	node = (*head)->next;
