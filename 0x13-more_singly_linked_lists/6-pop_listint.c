@@ -33,13 +33,6 @@ int pop_listint(listint_t **head)
 
 	if (!head || *head == NULL)
 		return (0);
-	size = get_size(*head);
-	if (size == 1)
-	{
-		value = (*head)->n;
-		free(*head);
-		return (value);
-	}
 	node = (*head)->next;
 	value = (*head)->n;
 	free(*head);
