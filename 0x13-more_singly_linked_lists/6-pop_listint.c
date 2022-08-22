@@ -29,7 +29,7 @@ int get_size(listint_t *h)
 int pop_listint(listint_t **head)
 {
 	listint_t *node;
-	int value, size;
+	int value;
 
 	if (!head || *head == NULL)
 		return (0);
