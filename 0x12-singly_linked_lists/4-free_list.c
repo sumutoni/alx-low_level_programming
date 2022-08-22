@@ -8,14 +8,15 @@
  */
 void free_list(list_t *head)
 {
-	list_t *node;
 	list_t *prev;
-
-	node = head;
-	while (node)
+	
+	if (!head)
+		return;
+	while (head)
 	{
-		prev = node;
-		node = node->next;
+		prev = head;
+		head = head->next;
+		free(prev->str);
 		free(prev);
 	}
 }
