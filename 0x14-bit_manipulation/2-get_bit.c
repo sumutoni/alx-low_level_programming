@@ -41,7 +41,6 @@ char count_binary(unsigned long int n, int count, unsigned int idx)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int idx;
 	int bit, count;
 
 	count = -1;
