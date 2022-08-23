@@ -33,7 +33,7 @@ char count_binary(unsigned long int n, unsigned int count, unsigned int idx)
 	return (bit);
 }
 /**
- * get_bit: get bit at index position
+ * get_bit - get bit at index position
  * @n: number to convert to binary
  * @index: index of bit
  *
