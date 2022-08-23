@@ -43,7 +43,9 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int bit;
 	unsigned int count;
-
+	
+	if (index >= 64)
+		return (-1);
 	count = -1;
 	bit = count_binary(n, count, index) - '0';
 	return (bit);
