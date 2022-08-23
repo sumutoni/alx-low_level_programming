@@ -8,7 +8,7 @@
  *
  * Return: value of bit at position idx
  */
-char count_binary(unsigned long int n, int count, unsigned int idx)
+char count_binary(unsigned long int n, unsigned int count, unsigned int idx)
 {
 	char bit;
 
@@ -41,7 +41,8 @@ char count_binary(unsigned long int n, int count, unsigned int idx)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int bit, count;
+	int bit;
+       unsigned int count;
 
 	count = -1;
 	bit = count_binary(n, count, index) - '0';
