@@ -42,9 +42,9 @@ char count_binary(unsigned long int n, unsigned int count, unsigned int idx)
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int bit;
-       unsigned int count;
+	unsigned int count;
 
 	count = -1;
 	bit = count_binary(n, count, index) - '0';
-	return (bit);	
+	return (bit);
 }
