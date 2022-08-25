@@ -5,7 +5,7 @@
  * @filename: name file to create
  * @text_content: null terminated string to write to file
  *
- * Return : 1 on success, -1 if failed
+ * Return: 1 on success, -1 if failed
  */
 int create_file(const char *filename, char *text_content)
 {
@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 	size_t bytes;
 
 	if (filename == NULL)
-			return (0);
+		return (-1);
 	if (text_content == NULL)
 	{
 		file_d = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
