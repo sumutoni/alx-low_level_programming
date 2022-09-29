@@ -22,7 +22,7 @@ unsigned int count(dlistint_t *head)
 /**
  * get_dnodeint_at_index - returns nth node of list
  * @head: head of list
- * index: index of node
+ * @index: index of node
  *
  * Return: node at nth index
  */
