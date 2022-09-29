@@ -29,7 +29,7 @@ unsigned int count(dlistint_t *head)
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *curr;
-	unsigned int size, count = 0;
+	unsigned int size, counter = 0;
 
 	if (!head)
 		return (NULL);
@@ -39,10 +39,10 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	curr = head;
 	while (curr)
 	{
-		if (count == index)
+		if (counter == index)
 			break;
 		curr = curr->next;
-		count++;
+		counter++;
 	}
 	return (curr);
 }
