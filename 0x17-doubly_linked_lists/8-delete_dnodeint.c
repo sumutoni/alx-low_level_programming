@@ -31,7 +31,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *curr;
 	unsigned int size, counter = 0;
 
-	if (!head)
+	if (!head || !*head)
 		return (-1);
 	size = count(*head);
 	if (index >= size)
