@@ -28,7 +28,7 @@ unsigned int count(dlistint_t *head)
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint *curr;
+	dlistint_t *curr;
 	unsigned int size, count = 0;
 
 	if (!head)
