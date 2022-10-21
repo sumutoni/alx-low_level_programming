@@ -29,7 +29,7 @@ int check_updates(hash_table_t *ht, unsigned long int idx, const char *key,
 /**
  * hash_table_set - adds an element to hash table
  * @ht: hash table to add to
- * @key: key 
+ * @key: key
  * @value: value associated with key
  *
  * Return: 1 if it succeeded, 0 otherwise
