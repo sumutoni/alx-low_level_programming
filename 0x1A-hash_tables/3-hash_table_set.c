@@ -15,7 +15,7 @@ int check_updates(hash_table_t *ht, unsigned long int idx, const char *key,
 	hash_node_t *node;
 
 	node = (ht->array)[idx];
-	while (node && !strcmp(node->key, (char *)key))
+	while (node && strcmp(node->key, (char *)key))
 	{
 		node = node->next;
 	}
