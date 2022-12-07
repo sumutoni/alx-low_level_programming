@@ -1,4 +1,4 @@
-CC = gcc-9.3.0
-SRC := $(wildcard *.c)
+CC = gcc
+SRC = $(wildcard *.c)
 all:
 	${CC} ${SRC} -o school
